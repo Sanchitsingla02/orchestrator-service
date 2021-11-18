@@ -1,0 +1,9 @@
+syntax = "proto3";
+func GetUserByName(ctx context.Context, name string) (*User, error) {
+    return nil, errors.New("not implemented yet. <yourname> will implement me")
+}
+type User struct {
+    name string
+    class string
+    roll int64
+}
