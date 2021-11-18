@@ -1,1 +1,8 @@
-func GetMockUserData(ctx context.Context, name string) (*User, error)
+func GetMockUserData(ctx context.Context, name string) (*User, error) {
+  if ( len(string) < 6 ) return error
+  else return {
+    string
+    len(string)
+    len(string)*10
+  }
+}
