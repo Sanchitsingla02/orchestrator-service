@@ -1,0 +1,7 @@
+This work is done on windows 10
+I was not able to completly understand it but tried to implement to my potential
+Golang, services, RPC, GRPC, API, everything is new to me so I tried to do whatever I could
+What I understood from the problem is that we need to build a Orchestrator service where it reads any request and forward it to other Orchestrator services and data services. For the data servvices we built the dummy data service branch and for the Orchestrator services we built the init-orchestrator-service.
+We built the RPC service and stored it is a client folder to run the server on a port and use the generated RPC client code to read response from the server.
+Finally, we built the logic foler where all the orchestral logic resides and, we run two orchestrator instances on port 9000, and 9001. The client calls method GetUserByNameon one orchestrator running port on 9000. This orchestrator is able to forward the call to the orchestrator instance on port 9001 and call it's GetUser method. The second orchestrator makes a call with received parameters to the data server running on port 10000 and call the GetMockUserData method.
+The GetMockUserData returns dummy response/error based on input, which is propagated to orchestrator 2, then to orchestrator 1 and finally back to clien.
